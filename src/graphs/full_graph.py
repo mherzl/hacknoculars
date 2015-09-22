@@ -55,5 +55,5 @@ def show_full_graph(pct=1, show=False, save=True):
   if save: plt.savefig(outputDir + '/' + 'full_plot.png')
   if show: plt.show()
 
-show_full_graph(pct=0.1, show=True)
+show_full_graph(pct=0.2, show=True)
 
