@@ -27,11 +27,16 @@ jacard_matches: data/clean_dependencies.txt src/jacard_matches.hs
 dependencies_hist: src/gen_plots/dependencies_hist.py data/clean_dependencies.txt
 	python src/gen_plots/dependencies_hist.py
 
-dependents_hist: src/gen_plots/dependents_hist.py
+dependents_hist: src/gen_plots/dependents_hist.py data/dependents.txt
 	python src/gen_plots/dependents_hist.py
 
 pagerank_dependents: src/gen_plots/pagerank_dependents.py data/page_rank.txt
 	python src/gen_plots/pagerank_dependents.py
+
+# Graphs ---------------------------------
+
+full_graph: src/graphs/full_graph.py data/dependents.txt
+	python src/graphs/full_graph.py
 
 # Aggregates -----------------------------
 
