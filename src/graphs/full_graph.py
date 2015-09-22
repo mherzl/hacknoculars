@@ -53,7 +53,7 @@ def show_full_graph(pct=1, show=False, save=True):
   title = str(100*pct) + '% of dependency graph'
   plt.title(title)
   if save: plt.savefig(outputDir + '/' + 'full_plot.png')
-  if show: plt.show()
+  #if show: plt.show()
 
-show_full_graph(pct=0.2, show=True)
+show_full_graph(pct=0.3, show=True)
 
