@@ -1,5 +1,5 @@
-duke miami unc uva vt
-miami
-unc miami vt
-uva miami unc vt
-vt miami
+E A C D B
+A
+C A B
+D A C B
+B A
