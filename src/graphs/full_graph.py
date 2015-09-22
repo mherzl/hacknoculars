@@ -1,4 +1,5 @@
 import networkx as nx
+import math
 import matplotlib.pyplot as plt
 
 dependenciesPath = 'data/clean_dependencies.txt'
@@ -20,8 +21,18 @@ def remove_acme_everything(dd):
   del r[key]
   return r
 
+def dic_percent(d,pct):
+  kys = d.keys()
+  l_new = int(len(kys) * pct)
+  k_new = kys[:l_new]
+  print("new length is: " + str(len(k_new)))
+  print("out of: " + str(len(kys)))
+  d_new = {k:d[k] for k in k_new}
+  return d_new
+
 def full_graph():
   depDic = remove_acme_everything(dependencies_dic())
+  depDic = dic_percent(depDic, 0.3)
   g = nx.DiGraph()
   for a in depDic.keys():
     for b in depDic[a]:
