@@ -44,16 +44,16 @@ def show_full_graph(pct=1, show=False, save=True):
   g = full_graph(pct)
   nx.draw_networkx(g,
     with_labels=False,
-    node_size=10,
+    node_size=0.2,
     alpha=0.5,
     linewidths=0,
-    width=0.1,
+    width=0.01,
     )
   #nx.draw(g)
   title = str(100*pct) + '% of dependency graph'
   plt.title(title)
-  if save: plt.savefig(outputDir + '/' + 'full_plot.png')
+  if save: plt.savefig(outputDir + '/' + 'full_plot.png', dpi=720)
   #if show: plt.show()
 
-show_full_graph(pct=0.3, show=True)
+show_full_graph(pct=1, show=True)
 
