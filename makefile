@@ -38,6 +38,7 @@ jacard1_hist: src/gen_plots/jacard1_hist.py data/jacard_matches.txt
 
 importance_zoom: src/gen_plots/importance_zoom.py data/page_rank.txt data/dependents.txt
 	python src/gen_plots/importance_zoom.py
+	convert -delay 35 -loop 0 plots/importance_zoom/importance_zoom_*.png plots/importance_zoom/importance_zoom.gif
 
 # Graphs ---------------------------------
 

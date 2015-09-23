@@ -76,4 +76,4 @@ def generate_zoom(nFrames=60, xTerm=10, xInit=10000):
     print(str((n,(x,y))) + ' of ' + str(nFrames))
     scatter_pr_ndep(n, save=True, show=False, verbose=False, xmin=0, xmax=x, ymin=0, ymax=y)
 
-generate_zoom(nFrames=60)
+generate_zoom(nFrames=15)
