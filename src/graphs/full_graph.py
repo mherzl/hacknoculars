@@ -47,7 +47,7 @@ def show_full_graph(pct=1, show=False, save=True):
     node_size=0.2,
     alpha=0.5,
     linewidths=0,
-    width=0.01,
+    width=0.02,
     )
   #nx.draw(g)
   title = str(100*pct) + '% of dependency graph'

@@ -37,11 +37,11 @@ showSim :: (String, [(String,Double)]) -> String
 showSim (h,t) = unlines $ h:" has similar packages":
     (map showSingleSim t)
   where showSingleSim :: (String,Double)->String
-        showSingleSim (s,d) = "  " ++ s ++ " has similarity: " ++ (show d) ++ " %"
+        showSingleSim (s,d) = "  " ++ s ++ " has similarity: " ++ (show d)-- ++ " %"
 
 printPackageData::PageRanks->Similarities->String->IO ()
 printPackageData p s n = do
-  putStr $ showPr $ searchPr p n
+  putStrLn $ showPr $ searchPr p n
   putStr $ showSim $ searchSim s n
 
 querySimN :: PageRanks -> Similarities -> IO ()

@@ -52,7 +52,7 @@ def scatter_pr_ndep(save=True, show=False, verbose=False):
         pMaxPr.append(names[i])
     print('The greatest page rank is: ' + str(maxPr))
     print('The packages with this pr are: ' + str(pMaxPr))
-  plt.title('Page Rank as a function of number of immediate dependents')
+  plt.title('Importance vs. Importance')
   plt.xlabel('# dependents')
   plt.ylabel('page rank')
   plt.scatter(nDeps, nPrs)
@@ -61,7 +61,7 @@ def scatter_pr_ndep(save=True, show=False, verbose=False):
   if show: plt.show()
   if save:
     outputPath = outputDir + '/' + 'pagerank_dependents.png'
-    plt.savefig(outputPath)
+    plt.savefig(outputPath, dpi=720)
 
 scatter_pr_ndep(save=True, show=False, verbose=True)
 
