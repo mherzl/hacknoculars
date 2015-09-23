@@ -34,13 +34,13 @@ def dependency_hist(save=True, show=False, verbose=False):
   def nDepFreq(n):
     return len(filter(lambda x: x==n, nDepsList))
   nDepFreqOverRange = [nDepFreq(d) for d in nDepRange]
-  plt.title('Number of packages with each number of immediate dependencies')
+  plt.title('Number of immediate dependencies')
   plt.xlabel('# dependencies')
   plt.ylabel('# packages')
   plt.bar(nDepRange, nDepFreqOverRange)
   #plt.yscale('log')
   #plt.xscale('log')
   if show: plt.show()
-  if save: plt.savefig(outputDir + '/' + 'dependency_hist.png')
+  if save: plt.savefig(outputDir + '/' + 'dependency_hist.png', dpi=720)
 
 dependency_hist(save=True, show=False)

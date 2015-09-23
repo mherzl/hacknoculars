@@ -41,14 +41,14 @@ def dependent_hist(save=True, show=False, verbose=False):
   def nDepFreq(n):
     return len(filter(lambda x: x==n, nDepsList))
   nDepFreqOverRange = [nDepFreq(d) for d in nDepRange]
-  plt.title('Number of packages with each number of immediate dependents')
+  plt.title('Number of Immediate Dependents')
   plt.xlabel('# dependents')
   plt.ylabel('# packages')
   plt.bar(nDepRange, nDepFreqOverRange)
   plt.yscale('log')
   plt.xscale('log')
   if show: plt.show()
-  if save: plt.savefig(outputDir + '/' + 'dependent_hist.png')
+  if save: plt.savefig(outputDir + '/' + 'dependent_hist.png', dpi=720)
 
 dependent_hist(save=True, show=False, verbose=False)
 
