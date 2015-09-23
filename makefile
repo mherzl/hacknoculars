@@ -33,6 +33,9 @@ dependents_hist: src/gen_plots/dependents_hist.py data/dependents.txt
 pagerank_dependents: src/gen_plots/pagerank_dependents.py data/page_rank.txt
 	python src/gen_plots/pagerank_dependents.py
 
+jacard1_hist: src/gen_plots/jacard1_hist.py data/jacard_matches.txt
+	python src/gen_plots/jacard1_hist.py
+
 # Graphs ---------------------------------
 
 full_graph: src/graphs/full_graph.py data/dependents.txt
