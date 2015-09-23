@@ -3,7 +3,7 @@ type PageRanks = [(String,Double)]
 
 getPr :: IO [(String,Double)]
 getPr = do
-  s <- readFile "page_rank.txt"
+  s <- readFile "data/page_rank.txt"
   let d = map words $ lines s
       pr :: [String] -> (String,Double)
       pr (a:b:[]) = (a, read b)
@@ -20,7 +20,7 @@ type Similarities = [(String, [(String, Double)])]
 
 getSimilarities :: IO Similarities
 getSimilarities = do
-  s <- readFile "jacard_matches.txt"
+  s <- readFile "data/jacard_matches.txt"
   let d = map words $ lines s
       sr :: [String] -> [(String,Double)]
       sr [] = []

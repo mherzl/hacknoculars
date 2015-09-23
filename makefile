@@ -38,6 +38,11 @@ pagerank_dependents: src/gen_plots/pagerank_dependents.py data/page_rank.txt
 full_graph: src/graphs/full_graph.py data/dependents.txt
 	python src/graphs/full_graph.py
 
+# Data Scripts -------------------------------
+
+query: src/data_scripts/query_package.hs
+	runhaskell src/data_scripts/query_package.hs
+
 # Aggregates -----------------------------
 
 plots: dependencies_hist dependents_hist pagerank_dependents
