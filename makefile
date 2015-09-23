@@ -30,11 +30,14 @@ dependencies_hist: src/gen_plots/dependencies_hist.py data/clean_dependencies.tx
 dependents_hist: src/gen_plots/dependents_hist.py data/dependents.txt
 	python src/gen_plots/dependents_hist.py
 
-pagerank_dependents: src/gen_plots/pagerank_dependents.py data/page_rank.txt
+pagerank_dependents: src/gen_plots/pagerank_dependents.py data/page_rank.txt data/dependents.txt
 	python src/gen_plots/pagerank_dependents.py
 
 jacard1_hist: src/gen_plots/jacard1_hist.py data/jacard_matches.txt
 	python src/gen_plots/jacard1_hist.py
+
+importance_zoom: src/gen_plots/importance_zoom.py data/page_rank.txt data/dependents.txt
+	python src/gen_plots/importance_zoom.py
 
 # Graphs ---------------------------------
 
